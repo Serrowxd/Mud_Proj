@@ -1,34 +1,26 @@
 type Query {
-  info: String!
-  inventory(inventory: ID!): Inventory
+  working: String!
+  inventory: Inventory!
+  user: User!
 }
 
 type Mutation {
-  signup(email: String!, password: String!, name: String!): AuthPayload
-  login(email: String!, password: String!): AuthPayload
-  modInventory(items: Item!): Inventory
-}
-
-type User {
-  id: ID!
-  name: String!
-  email: String!
-  inventory: Inventory!
+  items(name: String!, description: String!, amount: Int): Item!
 }
 
 type Inventory {
-  ownedBy: User
-  description: String!
   items: [Item!]!
 }
 
 type Item {
   id: ID!
+  name: String!
   description: String!
   amount: Int!
 }
 
-type AuthPayload {
-  token: String
-  user: User
+type User {
+  id: ID!
+  name: String!
+  inventory: Inventory!
 }
