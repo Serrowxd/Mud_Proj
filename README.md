@@ -6,6 +6,10 @@ MudUI will be added later, right now the focus is getting the simple logic down 
 
 For now all the content will be ran in a simple manner, we'll make it pretty later.
 
+--
+
+Revisiting this with a fresh mindset, going to just do everything on the front-end without having it persist until I can fully get the logic down. I'll worry about the rest later.
+
 ## To-Do
 
 - User Login / Auth
